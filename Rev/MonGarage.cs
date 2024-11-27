@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BLL.Garage;
 
 namespace Rev
 {
@@ -51,5 +52,21 @@ namespace Rev
         {
 
         }
-    }
+
+        private void Ajouter_Click(object sender, EventArgs e)
+        {
+            if (radioMoto.Checked)
+            {
+                Moto v = new Moto();
+                NouveauMoto nv = new NouveauMoto(v);
+                if (nv.ShowDialog() == DialogResult.Cancel)
+                {
+                    garage.AddAuto(v);
+                }
+                listauto = garage.AfficherAutomobiles(SubType.Moto);
+                remplirListe();
+            }
+
+            }
+        }
 }

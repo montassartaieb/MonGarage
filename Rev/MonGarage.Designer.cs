@@ -33,8 +33,8 @@
             label3 = new Label();
             label4 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            radioVoiture = new RadioButton();
+            radioMoto = new RadioButton();
             listBox1 = new ListBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             Ajouter = new Button();
@@ -92,37 +92,37 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = SystemColors.ActiveCaptionText;
-            flowLayoutPanel1.Controls.Add(radioButton1);
-            flowLayoutPanel1.Controls.Add(radioButton2);
+            flowLayoutPanel1.Controls.Add(radioVoiture);
+            flowLayoutPanel1.Controls.Add(radioMoto);
             flowLayoutPanel1.Location = new Point(2, 3);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(372, 49);
             flowLayoutPanel1.TabIndex = 3;
             // 
-            // radioButton1
+            // radioVoiture
             // 
-            radioButton1.Anchor = AnchorStyles.Top;
-            radioButton1.ForeColor = SystemColors.ButtonHighlight;
-            radioButton1.Location = new Point(3, 3);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(104, 24);
-            radioButton1.TabIndex = 3;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Voiture";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            radioVoiture.Anchor = AnchorStyles.Top;
+            radioVoiture.ForeColor = SystemColors.ButtonHighlight;
+            radioVoiture.Location = new Point(3, 3);
+            radioVoiture.Name = "radioVoiture";
+            radioVoiture.Size = new Size(104, 24);
+            radioVoiture.TabIndex = 3;
+            radioVoiture.TabStop = true;
+            radioVoiture.Text = "Voiture";
+            radioVoiture.UseVisualStyleBackColor = true;
+            radioVoiture.CheckedChanged += radioButton1_CheckedChanged;
             // 
-            // radioButton2
+            // radioMoto
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.ForeColor = SystemColors.ButtonHighlight;
-            radioButton2.Location = new Point(113, 3);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(54, 19);
-            radioButton2.TabIndex = 4;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Moto";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioMoto.AutoSize = true;
+            radioMoto.ForeColor = SystemColors.ButtonHighlight;
+            radioMoto.Location = new Point(113, 3);
+            radioMoto.Name = "radioMoto";
+            radioMoto.Size = new Size(54, 19);
+            radioMoto.TabIndex = 4;
+            radioMoto.TabStop = true;
+            radioMoto.Text = "Moto";
+            radioMoto.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -152,6 +152,7 @@
             Ajouter.TabIndex = 0;
             Ajouter.Text = "Ajouter";
             Ajouter.UseVisualStyleBackColor = true;
+            Ajouter.Click += Ajouter_Click;
             // 
             // button1
             // 
@@ -201,8 +202,8 @@
         private Label label3;
         private Label label4;
         private FlowLayoutPanel flowLayoutPanel1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton radioVoiture;
+        private RadioButton radioMoto;
         private ListBox listBox1;
         private FlowLayoutPanel flowLayoutPanel2;
         private Button Ajouter;
